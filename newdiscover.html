@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover - Thrifters</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        /* Style for the buttons */
+        .discover-buttons {
+            margin-top: 20px;
+        }
+        .discover-buttons button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .discover-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Discover</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="myplace.html">My Place</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to the Discover Page</h1>
+        <p>Explore new locations, categories, and hidden gems in Tel Aviv!</p>
+        <p>This page will feature curated lists, trending spots, and more.</p>
+
+        <!-- Discover Buttons -->
+        <div class="discover-buttons">
+            <button onclick="showServices()">Discover Services</button>
+            <button onclick="showProducts()">Discover Products</button>
+            <button onclick="showEvents()">Discover Events</button>
+        </div>
+
+        <!-- Dynamic Content Section -->
+        <div id="dynamic-content">
+            <!-- Content will be dynamically updated here based on button clicks -->
+        </div>
+    </div>
+
+    <!-- JavaScript for Button Functionality -->
+    <script>
+        // Function to show services content
+        function showServices() {
+            const dynamicContent = document.getElementById('dynamic-content');
+            dynamicContent.innerHTML = `
+                <h2>Discover Services</h2>
+                <p>Here are some amazing services you can explore in Tel Aviv:</p>
+                <ul>
+                    <li>Thrift Stores</li>
+                    <li>Vintage Repair Shops</li>
+                    <li>Custom Tailoring</li>
+                </ul>
+            `;
+        }
+
+        // Function to show products content
+        function showProducts() {
+            const dynamicContent = document.getElementById('dynamic-content');
+            dynamicContent.innerHTML = `
+                <h2>Discover Products</h2>
+                <p>Check out these unique products available in Tel Aviv:</p>
+                <ul>
+                    <li>Vintage Clothing</li>
+                    <li>Handmade Jewelry</li>
+                    <li>Antique Furniture</li>
+                </ul>
+            `;
+        }
+
+        // Function to show events content
+        function showEvents() {
+            const dynamicContent = document.getElementById('dynamic-content');
+            dynamicContent.innerHTML = `
+                <h2>Discover Events</h2>
+                <p>Don't miss these exciting events happening in Tel Aviv:</p>
+                <ul>
+                    <li>Vintage Market Day</li>
+                    <li>Thrift Fashion Show</li>
+                    <li>Antique Auction</li>
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>
